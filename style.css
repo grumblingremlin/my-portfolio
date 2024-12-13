@@ -1,0 +1,210 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Monospace, Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 290px;
+    background-color: #382b45;
+    color: rgb(220, 216, 196);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    justify-content: space-between; /* Ensures footer is at the bottom */
+  }
+  
+  .sidebar h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .sidebar ul li {
+    margin: 10px 0;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: rgb(220, 216, 196);
+    font-size: 1.2rem;
+    display: block;
+    padding: 15px 0;
+    width: 100%;
+  }
+  
+  .sidebar ul li a:hover {
+   
+    color: rgb(220, 216, 196)#fff;
+  }
+
+.sidebar nav {
+    flex-grow: 1; /* Pushes the footer to the bottom */
+  }
+
+.sidebar-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgb(220, 216, 196);
+  padding: 20px
+}
+
+.sidebar-footer p {
+  margin: 10;
+  color: rgb(220, 216, 196)
+}
+
+.sidebar-footer p:hover {
+  color: rgb(220, 216, 196); /* Hover effect */
+}
+  
+  /* Main Content */
+  main {
+    margin-left: 290px; /* Same width as sidebar */
+    padding: 100px;
+    flex-grow: 1;
+    background-color: rgb(220, 216, 196);
+    color:#382b45;
+  }
+  
+
+.github-logo {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Maintain aspect ratio */
+    vertical-align: middle; /* Aligns with text in the nav */
+    margin-left: 8px; /* Add spacing if needed */
+  }
+  
+.github-logo:hover {
+    opacity: 0.8; /* Add hover effect */
+    transform: scale(1.1); /* Slight zoom on hover */
+    transition: transform 0.2s, opacity 0.2s; /* Smooth animation */
+  }
+
+.linkedin-logo {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Maintain aspect ratio */
+    vertical-align: middle; /* Aligns with text in the nav */
+    margin-left: 8px; /* Add spacing if needed */
+  }
+  
+.linkedin-logo:hover {
+    opacity: 0.8; /* Add hover effect */
+    transform: scale(1.1); /* Slight zoom on hover */
+    transition: transform 0.2s, opacity 0.2s; /* Smooth animation */
+  }
+  
+  /* Define the bounce animation */
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-5px); /* Moves up */
+    }
+    50% {
+      transform: translateY(0); /* Returns to normal position */
+    }
+    75% {
+      transform: translateY(-2px); /* A slight bounce */
+    }
+    100% {
+      transform: translateY(0); /* Final position */
+    }
+  }
+  
+  /* Apply bounce animation only when hovering over individual links */
+  nav ul li a {
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth transition for the animation */
+  }
+  
+  nav ul li a:hover {
+    animation: bounce 0.6s ease forwards; /* Apply bounce on hover */
+  }
+  
+  /* Style for the moving GIF container */
+.moving-gif-container {
+    position: fixed;          /* Fix the GIF at the bottom of the page */
+    bottom: 0;                /* Align it at the bottom */
+    left: 0;                  /* Start from the left edge of the page */
+    width: 100%;              /* Take up the entire width of the page */
+    display: flex;
+    justify-content: center;  /* Center the GIF horizontally */
+    z-index: 1000;            /* Make sure it's above other content */
+    overflow: hidden;         /* Ensure the GIF doesn't overflow the container */
+  }
+  
+  /* Style for the GIF itself */
+  .moving-gif {
+    width: 100px;             /* Set the width of the GIF */
+    animation: moveGif 20s linear infinite; /* Animate the GIF */
+  }
+  
+  /* Keyframes for moving the GIF from left to right */
+  @keyframes moveGif {
+    0% {
+      transform: translateX(-800%) scaleX(1);  /* Start off-screen to the left */
+    }
+    100% {
+      transform: translateX(1000%) scaleX(1);   /* End off-screen to the right */
+    }
+  }
+
+  .hidden {
+    display: none;
+}
+
+.circle-image {
+    display: block; /* Center the image */
+    margin: 0 auto; /* Horizontal centering */
+    width: 250px; /* Adjust size as needed */
+    height: 250px; /* Same value as width for a perfect circle */
+    border-radius: 50%; /* Makes the image a circle */
+    object-fit: cover; /* Ensures the image fits inside the circle */
+    margin-top: 20px; /* Adjust spacing from the top */
+    object-position: 90% 10%;
+  }
+
+  .flip-in {
+  font-size: 80px; /* Larger font size */
+  font-weight: bold;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  color: #3f346a; /* Customize your text color */
+  transform: rotateX(180deg); /* Start with flipped text */
+  animation: flipIn 2s forwards; /* Apply flip animation */
+}
+
+@keyframes flipIn {
+  0% {
+    transform: rotateX(180deg); /* Start with a flip */
+    opacity: 0; /* Start invisible */
+  }
+  50% {
+    transform: rotateX(0); /* Flip to normal position */
+    opacity: 1; /* Text becomes visible */
+  }
+  100% {
+    transform: rotateX(0); /* End in normal position */
+    opacity: 1; /* Text stays visible */
+  }
+}
