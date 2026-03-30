@@ -1,50 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .projects-header {
+    margin-bottom: 0;
+    padding-bottom: 40px;
+  }
 
+  .project-card {
+    margin-left: -100px;
+    margin-right: -100px;
+    padding: 50px 100px;
+  }
+
+  /* Odd cards: cream background (matches main) */
+  .project-card.cream {
+    background-color: rgb(220, 216, 196);
+    color: #382b45;
+  }
+
+  /* Even cards: purple background */
+  .project-card.purple {
+    background-color: #382b45;
+    color: rgb(220, 216, 196);
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+    margin-top: 0;
+    letter-spacing: 0.03em;
+  }
+
+  .project-card .tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .project-card.cream .tag {
+    background-color: #382b45;
+    color: rgb(220, 216, 196);
+  }
+
+  .project-card.purple .tag {
+    background-color: rgb(220, 216, 196);
+    color: #382b45;
+  }
+
+  .project-card ul {
+    margin: 0;
+    padding-left: 1.2em;
+    line-height: 1.9;
+  }
+
+  .project-card ul li {
+    margin-bottom: 4px;
+  }
+
+  /* Divider line between heading and first card */
+  .projects-divider {
+    border: none;
+    border-top: 2px solid #382b45;
+    margin: 0 -100px;
+  }
+</style>
+</head>
 <body>
-    <div class="sidebar">
-    <nav>
+
+<div class="sidebar">
+  <nav>
     <h1>GRUMBLINGREMLIN</h1>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Me</a></li>
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="skills.html">Skills</a><li>
+      <li><a href="skills.html">Skills</a></li>
       <li><a href="https://github.com/grumblingremlin" target="_blank">
         <img src="github-logo.svg" alt="GitHub" class="github-logo">
-        </a></li>
+      </a></li>
       <li><a href="https://www.linkedin.com/in/ishita-sharma-958506264/" target="_blank">
         <img src="linkedin-logo.png" alt="LinkedIn" class="linkedin-logo">
       </a></li>
     </ul>
-</nav>
-<footer class="sidebar-footer">
-    <p>© 2024 Ishita Sharma | grumblingremlin </p>
-    </footer>
+  </nav>
+  <footer class="sidebar-footer">
+    <p>© 2024 Ishita Sharma | grumblingremlin</p>
+  </footer>
 </div>
 
 <main>
-  <section>
+  <div class="projects-header">
     <h2>Projects</h2>
-    Here's where I would write about the many intricate, complex projects I've created. Alas, the number of personal projects I've made is somewhere below one. So here's a list of the projects I <i>want</i> to do!
-    <ul>
-      <li><strong><s>Create my own website</s></strong>
-      <li><strong>Arcade-style app, where you can play games online with your friends</strong></li>
-      <li><strong>Movie recommendation app: you and your friends' movie tastes are compared to give you the best movie-night recs.</strong>
-
-
-    </ul>
-  </section>
-</main>
-<div class="moving-gif-container">
-    <img src="cat.gif" alt="Moving GIF" class="moving-gif">
   </div>
-  <script src="script.js"></script>
+  <hr class="projects-divider">
+
+  <!-- Project 1: Cream -->
+  <div class="project-card purple">
+    <h3>Honours Project — Machine Learning for Subsurface Marine Heatwaves</h3>
+    <span class="tag">Machine Learning · Oceanography</span>
+    <ul>
+      <li>Investigating relationships between sea surface height and subsurface ocean temperature using data-driven approaches.</li>
+      <li>Working with large-scale oceanographic datasets to uncover hidden patterns in ocean behaviour.</li>
+      <li>Applying and evaluating machine learning techniques to identify patterns in subsurface heat behaviour.</li>
+      <li>Developing understanding of environmental data modelling and its applications in climate science.</li>
+    </ul>
+  </div>
+
+  <!-- Project 2: Purple -->
+  <div class="project-card cream">
+    <h3>ECG Arrhythmia Detection</h3>
+    <span class="tag">Biosignal Processing · Classification</span>
+    <ul>
+      <li>Extracted RR interval features from MIT-BIH ECG data and trained a logistic regression classifier to detect abnormal heartbeats.</li>
+      <li>Applied feature engineering and handled severe class imbalance; evaluated model robustness using both single train-test split and 5-fold cross-validation (F1 = 0.89).</li>
+      <li>Applied biosignal processing and statistical analysis to detect abnormal heartbeats.</li>
+    </ul>
+  </div>
+
+  <!-- Project 3: Cream -->
+  <div class="project-card purple">
+    <h3>Travel Itinerary Recommendation Web App</h3>
+    <span class="tag">Full Stack · Flask · Web App</span>
+    <ul>
+      <li>Developed a full-stack Flask-based app to generate personalised travel itineraries based on user preferences.</li>
+      <li>Designed and implemented user authentication and secure data storage.</li>
+      <li>Built a recommendation system mapping user preferences to destinations.</li>
+      <li>Enabled users to save, view, and share itineraries with other registered users.</li>
+    </ul>
+    <p style="margin-top: 14px; margin-bottom: 0; font-size: 0.85rem;">
+      <a href="https://github.com/lou-chan03/CITS3403_Explorate_2025" target="_blank" style="color: rgb(220, 216, 196); text-decoration: underline;">View on GitHub ↗</a>
+    </p>
+  </div>
+
+  <!-- Project 4: Purple -->
+  <div class="project-card cream">
+    <h3>Speedrun Leaderboard System</h3>
+    <span class="tag">Data Structures · Performance</span>
+    <ul>
+      <li>Designed and implemented a leaderboard system to manage and query speedrunning performance data.</li>
+      <li>Achieved O(log n) time complexity using efficient data structures.</li>
+      <li>Focused on performance optimisation and scalable design.</li>
+    </ul>
+  </div>
+
+</main>
+
+<div class="moving-gif-container">
+  <img src="cat.gif" alt="Moving GIF" class="moving-gif">
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
